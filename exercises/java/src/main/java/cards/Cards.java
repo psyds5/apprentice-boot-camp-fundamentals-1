@@ -40,14 +40,8 @@ public class Cards {
             }
 
             String suitName;
-            switch (card[0]){
-                case 0: suitName = "clubs"; break;
-                case 1: suitName = "diamonds"; break;
-                case 2: suitName = "hearts"; break;
-                case 3: suitName = "spades"; break;
-                default: throw new IllegalArgumentException("Something went wrong " + card[0] + "is not a valid suitName!");
-            }
-
+            PlayingCard playingCard = new PlayingCard(card[0]);
+            suitName = playingCard.getSuit();
             result[cardNumber] = faceValueName + " of " + suitName;
             cardNumber++;
         }
