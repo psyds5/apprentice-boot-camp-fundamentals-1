@@ -21,26 +21,11 @@ public class Cards {
 
         int cardNumber = 0;
         for (int[] card : deck) {
+            PlayingCard playingCard = new PlayingCard(card[0], card[1]);
             String faceValueName;
-            switch (card[1]){
-                case 0: faceValueName = "ace"; break;
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
-                case 6:
-                case 7:
-                case 8:
-                case 9: faceValueName = Integer.toString(card[1]+1); break;
-                case 10: faceValueName = "jack"; break;
-                case 11: faceValueName = "queen"; break;
-                case 12: faceValueName = "king"; break;
-                default: throw new IllegalArgumentException("Something went wrong " + card[1] + "is not a valid faceValue!");
-            }
+            faceValueName = playingCard.getFaceValue();
 
             String suitName;
-            PlayingCard playingCard = new PlayingCard(card[0]);
             suitName = playingCard.getSuit();
             result[cardNumber] = faceValueName + " of " + suitName;
             cardNumber++;
