@@ -1,8 +1,8 @@
 package cards;
 
 public class PlayingCardDeck {
-    PlayingCard[] cards;
-    String[] result;
+    private PlayingCard[] cards;
+    private String[] result;
 
     public PlayingCardDeck(int numberOfCards){
         cards = new PlayingCard[numberOfCards];

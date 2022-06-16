@@ -1,7 +1,7 @@
 package cards;
 
 public class Suit {
-    String name;
+    private String name;
 
     public Suit(int suitNumber){
         switch (suitNumber){
